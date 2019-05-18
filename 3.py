@@ -1,0 +1,5 @@
+m=float(input('Enter Mileage: '))
+a=float(input('Enter Amount per litre: '))
+d=float(input('Enter Distance(for one way): '))
+price=(d*2*a)/(m*4)
+print(price,price%5==0)
