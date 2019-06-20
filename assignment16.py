@@ -11,7 +11,7 @@ def payment(coins,notes,amount):
     if amount_1<remain:
         return -1
     return ("5rs note:-",pd5,"1rs coin:-",remain)
-print(payment(1,21,110))
+print(payment(5,20,105))
     
         
     

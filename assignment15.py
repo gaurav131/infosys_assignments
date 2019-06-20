@@ -3,7 +3,6 @@ def mul(x):
     for i in x:
         m*=i
     return m
-
 def positive_int(*x):
     if len(x)==3:
         if 7 in x:
