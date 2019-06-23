@@ -1,29 +1,22 @@
-h = int(input('Enter No.of heads :'))
-l = int(input('Enter No.of legs :'))
-# fomula1
-c = (4*h-l)//2
-# fomula2
-r = (h-c)
-if(c*2+r*4 == l):
-    print('No.of chickens: ',c,"\nNo.of rabbits: ",r)
-else:
-    print('No solution')
+
+def solve(heads,legs):
+    for i in range(heads+1):
+        j=heads-i
+        if (2*i)+(4*j)==legs:
+            print (i,j)
+            return
+    print("No solution")
+
+    #Start writing your code here
+    #Populate the variables: chicken_count and rabbit_count
 
 
-'''
-r - rabbit
-c - chicken
-h - heads
-l - legs
 
-head count: h=r+c
-leg count: l = r*4 + c*2
+    # Use the below given print statements to display the output
+    # Also, do not modify them for verification to work
 
-head rule
-h=r+c -> r=h-c
-(h-c)*4 + c*2 = l
-4h-2C=l
-c = (4h-l)/2
-r = h-c
+    #print(chicken_count,rabbit_count)
+    #print(error_msg)
 
-'''
+#Provide different values for heads and legs and test your program
+solve(38,131)
