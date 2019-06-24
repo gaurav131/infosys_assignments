@@ -5,8 +5,8 @@ def find_max(num1, num2):
         main_list = []
         for x in data:
             b = str(x)
-            if "-" in str(x):
-                b = str(x)[1:]
+            if x < 0:
+                b = str(x*-1)
             sx = list(map(int,list(b)))
             if len(sx)==2 and sum(sx)%3==0 and x%5==0:
                 main_list.append(x)
