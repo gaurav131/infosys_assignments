@@ -1,11 +1,9 @@
 def calculate_bill_amount(gems_list, price_list, reqd_gems,reqd_quantity):
     bill_amount=0
-    #Write your logic here
     cost  = dict(zip(gems_list,price_list))
     for x in reqd_gems:
         if x not in cost.keys():
-            bill_amount = -1
-            return bill_amount
+            return -1
     if 0 in reqd_quantity:
         return -1
     amount = []

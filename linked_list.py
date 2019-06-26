@@ -40,7 +40,6 @@ class LinkedList:
             print(temp.get_data())
             temp=temp.get_next()
                                               
-    #You can use the below __str__() to print the elements of the DS object while debugging
     def __str__(self):
         temp=self.__head
         msg=[]
@@ -53,7 +52,10 @@ class LinkedList:
 
 def count_nodes(biscuit_list):
     count=0
-    # Write your logic here
+    head = biscuit_list.get_head()
+    while head:
+        count+=1
+        head = head.get_next()
 
     return count
 
