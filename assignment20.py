@@ -22,12 +22,9 @@ def calculate_loan(account_number,salary,account_balance,loan_type,loan_amount_e
     if loan_amount_expected > criteria[loan_type]["e_loan_amount"] or customer_emi_expected > criteria[loan_type]["no_of_emi"]:
         print("The customer is not eligible for the loan")
         return
-    #Start writing your code here
-    #Populate the variables: eligible_loan_amount and bank_emi_expected
     eligible_loan_amount = criteria[loan_type]["e_loan_amount"]
     bank_emi_expected = criteria[loan_type]["no_of_emi"]
 
-    #Use the below given print statements to display the output, in case of success
     print("Account number:", account_number)
     print("The customer can avail the amount of Rs.", eligible_loan_amount)
     print("Eligible EMIs :", bank_emi_expected)

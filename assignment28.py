@@ -12,7 +12,6 @@ def find_max(num1, num2):
                 main_list.append(x)
         if len(main_list)!=0:
             return max(main_list)
-        
     return max_num
 
 #Provide different values for num1 and num2 and test your program.

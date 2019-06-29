@@ -7,14 +7,10 @@ def find_more_than_average():
         if i>mean:
             count+=1
     return count*10
-    #Remove pass and write your logic here
-
 def sort_marks():
     s_list = list(list_of_marks)
     s_list.sort()
     return s_list
-    #Remove pass and write your logic here
-
 def generate_frequency():
     freq = [0]*26
     for x in range(max(list_of_marks)+1):
@@ -25,8 +21,6 @@ def generate_frequency():
         freq[x]=count
     
     return freq
-    #Remove pass and write your logic here
-
 print(find_more_than_average())
 print(generate_frequency())
 print(sort_marks())
