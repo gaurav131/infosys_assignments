@@ -1,21 +1,20 @@
 def find_correct(word_dict):
-    correct = 0
-    almost = 0
-    wrong = 0
-    for i in word_dict.keys():
-        match = 0
-        count = len(i)-1
-        while count>=0:
-            if i[count]!=word_dict[i][count]:
-                match+=1
-            count-=1
-        if match == 0:
+    correct,almost,incorrect=0,0,0
+    for key,value in word_dict.items():
+        count=0
+        if(key==value):
             correct+=1
-        elif match <=2:
-            almost += 1
+        elif(len(key)==len(value)):
+            for i in range(0,len(key)):
+                if(key[i]!=value[i]):
+                    count+=1
+            if(count<=2):
+                almost+=1
+            else:
+                incorrect+=1
         else:
-            wrong += 1
-    return [correct,almost,wrong]
+            incorrect+=1
+    return [correct,almost,incorrect]
 
 word_dict = {"THEIR": "THEIR","BUSINESS":"BISINESS","WINDOWS":"WINDMILL","WERE":"WEAR","SAMPLE":"SAMPLE"}
 print(find_correct(word_dict))
