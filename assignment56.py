@@ -1,5 +1,5 @@
 def max_frequency_word_counter(data):
-    data = data.split()
+    data = list(map(lambda x:x.lower(), data.split()))
     word_map = {}
     for x in data:
         if x not in word_map.values():
